@@ -1,0 +1,19 @@
+plugins {
+    id "java"
+}
+
+group = "at.helpch"
+version = "1.0.0"
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.hytale.com/release/" }
+    maven { url "https://repo.helpch.at/releases" }
+    maven { url "https://repo.codemc.io/repository/creatorfromhell/" }
+}
+
+dependencies {
+    compileOnly "com.hypixel.hytale:Server:2026.01.24-6e2d4fc36"
+    compileOnly "at.helpch:placeholderapi-hytale:1.0.4"
+    compileOnly "net.cfh.vault:VaultUnlocked:2.18.3"
+}
