@@ -45,7 +45,7 @@ public class EconomyHook extends VaultHook {
     }
 
     private BigDecimal getBalance(@NotNull final PlayerRef player) {
-        return economy.getBalance("HelpChat:PlaceholderAPI", player.getUuid());
+        return economy.balance("HelpChat:PlaceholderAPI", player.getUuid());
     }
 
     private @NotNull String setDecimalPoints(BigDecimal balance, int points) {
@@ -103,9 +103,13 @@ public class EconomyHook extends VaultHook {
 
     @Override
     public @Nullable String onRequest(@Nullable PlayerRef offlinePlayer, @NotNull String params) {
+        System.out.println("called");
+
         if (offlinePlayer == null) {
             return "";
         }
+
+        System.out.println("2");
 
         final BigDecimal balance = getBalance(offlinePlayer);
 
