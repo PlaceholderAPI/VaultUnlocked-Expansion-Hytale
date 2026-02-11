@@ -103,13 +103,9 @@ public class EconomyHook extends VaultHook {
 
     @Override
     public @Nullable String onRequest(@Nullable PlayerRef offlinePlayer, @NotNull String params) {
-        System.out.println("called");
-
         if (offlinePlayer == null) {
             return "";
         }
-
-        System.out.println("2");
 
         final BigDecimal balance = getBalance(offlinePlayer);
 
